@@ -1,0 +1,99 @@
+.navBar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: rgb(10, 179, 122);
+  padding: 8px 12px;
+}
+
+body {
+  margin: 0%;
+}
+
+a {
+  text-decoration: none;
+  color: white;
+}
+
+.navBar_logo {
+  font-size: 20px;
+  color: white;
+}
+
+.navBar_logo i {
+  font-size: 20;
+  color: white;
+}
+
+.navBar_menu {
+  display: flex;
+  list-style: none;
+  padding-left: 8px;
+}
+
+.navBar_menu li {
+  padding: 8px;
+  color: white;
+}
+
+.navBar_menu li:hover {
+  background-color: darkgrey;
+  border-radius: 5px;
+}
+
+.navBar_icons {
+  display: flex;
+  list-style: none;
+}
+
+.navBar_icons li {
+  padding: 8px;
+  color: white;
+}
+
+body {
+  margin: 0%;
+}
+
+.navBar_toggleBtn {
+  display: none;
+  position: absolute;
+  right: 14px;
+  font-size: 20px;
+  color: white;
+}
+
+@media screen and (max-width: 700px) {
+  .navBar {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .navBar_menu {
+    display: none;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+  }
+
+  .navBar_menu li {
+    width: 100%;
+    text-align: center;
+  }
+
+  .navBar_icons {
+    display: none;
+    justify-content: center;
+    width: 100%;
+    padding: 0%;
+  }
+
+  .navBar_toggleBtn {
+    display: block;
+  }
+
+  .navBar_menu.active,
+  .navBar_icons.active {
+    display: flex;
+  }
+}
